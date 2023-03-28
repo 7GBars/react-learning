@@ -1,0 +1,16 @@
+@use "src/App";
+
+@mixin set-main-container-fonts-styles($className, $color, $size, $text-decoration: none) {
+  color: #{$color};
+  #{$className}__header {
+    font-size: #{$size};
+    text-decoration: #{$text-decoration};
+  }
+}
+.dynamic-name-component {
+  @include set-main-container-fonts-styles(&, App.$basic-text-color, 2rem)
+}
+
+.dynamic-name-component--copy {
+  @include set-main-container-fonts-styles(&, App.$test-text-color, 4rem, underline overline)
+}
