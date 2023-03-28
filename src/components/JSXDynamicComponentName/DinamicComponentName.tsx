@@ -1,30 +1,38 @@
 import React from 'react';
 //https://stackoverflow.com/questions/28842459/react-jsx-dynamic-component-names
+//https://stackoverflow.com/questions/29875869/react-jsx-dynamic-component-name
 
 import './DinamicComponentName.scss';
 
-type TDynamicComponentNameProps = {name: string}
+type TDynamicComponentNameProps = {name?: string}
 
-export function Component(props: TDynamicComponentNameProps) {
+function InputComponent(props: TDynamicComponentNameProps) {
     return (
         <div className={'dynamic-name-component'}>
-            <header className={'dynamic-name-component__header'}>
-                {`dynamic name ${props.name}`}
-            </header>
+            <input id={'number-input'} type={'number'}/>
+            <label htmlFor='number-input'>Компонент инпута</label>
         </div>
     );
 }
-export function ComponentCopy(props: TDynamicComponentNameProps) {
+function TextComponentCopy(props: TDynamicComponentNameProps) {
     return (
         <div className={'dynamic-name-component--copy'}>
-            <header className={'dynamic-name-component--copy__header'}>
-                {`dynamic name ${props.name}`}
-            </header>
+            <p>{props.name}</p>
+        </div>
+    );
+}
+
+function ButtonComponent(props: TDynamicComponentNameProps) {
+    return (
+        <div className={'dynamic-name-component--copy'}>
+            <button>{props.name}</button>
         </div>
     );
 }
 
 export const ComponentsObject = {
-    component1: Component,
-    component2: ComponentCopy
+    input: InputComponent,
+    text: TextComponentCopy,
+    button: ButtonComponent,
+    default: () => <div>Такого копонента нет</div>
 }
