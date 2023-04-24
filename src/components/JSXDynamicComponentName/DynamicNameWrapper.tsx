@@ -1,7 +1,7 @@
 import React, {useMemo, useRef, useState} from 'react';
 import {ComponentsObject} from "./DinamicComponentName";
 
-export function ComponentDynamicName(props: any) {
+export function DynamicNameWrapper(props: any) {
     const inputRef = useRef<HTMLInputElement>(null);
     const [componentName, setComponentName] = useState('');
 

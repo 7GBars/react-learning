@@ -1,0 +1,16 @@
+.user-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  .user-info__status {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  .user-info__status.online {
+    background-color: green;
+  }
+  .user-info__status.offline {
+    background-color: red;
+  }
+}

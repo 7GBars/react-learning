@@ -1,14 +1,15 @@
-import React, {useRef, useState} from 'react';
-
+import React from 'react';
+import {DynamicNameWrapper, UserInfo} from './components';
 import './App.scss';
-import {ComponentsObject} from "./components/JSXDynamicComponentName/DinamicComponentName";
-import {ComponentDynamicName} from "./components/JSXDynamicComponentName/ComponentDynamicName";
+
+
 
 function App() {
 
   return (
     <div className="App">
-        <ComponentDynamicName/>
+        <DynamicNameWrapper/>
+        <UserInfo name={'random user'}/>
     </div>
   );
 }
