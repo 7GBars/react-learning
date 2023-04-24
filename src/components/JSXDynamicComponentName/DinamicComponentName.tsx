@@ -4,35 +4,44 @@ import React from 'react';
 
 import './DinamicComponentName.scss';
 
-type TDynamicComponentNameProps = {name?: string}
+type TDynamicComponentNameProps = {value?: string}
 
 function InputComponent(props: TDynamicComponentNameProps) {
     return (
-        <div className={'dynamic-name-component'}>
+        <div className={'dynamic-value-component'}>
             <input id={'number-input'} type={'number'}/>
-            <label htmlFor='number-input'>Компонент инпута</label>
+            <label htmlFor='number-input'>{props.value}</label>
         </div>
     );
 }
 function TextComponentCopy(props: TDynamicComponentNameProps) {
     return (
-        <div className={'dynamic-name-component--copy'}>
-            <p>{props.name}</p>
+        <div className={'dynamic-value-component--copy'}>
+            <p>{props.value}</p>
         </div>
     );
 }
 
 function ButtonComponent(props: TDynamicComponentNameProps) {
     return (
-        <div className={'dynamic-name-component--copy'}>
-            <button>{props.name}</button>
+        <div className={'dynamic-value-component--copy'}>
+            <button>{props.value}</button>
         </div>
     );
 }
 
+function ImageComponent(props: TDynamicComponentNameProps) {
+    return (
+        <div className={'dynamic-value-component--copy'}>
+            <img src={props.value} width={50} height={50}/>
+        </div>
+    )
+}
+
 export const ComponentsObject = {
     input: InputComponent,
-    text: TextComponentCopy,
+    p: TextComponentCopy,
     button: ButtonComponent,
-    default: () => <div>Такого копонента нет</div>
+    img: ImageComponent,
+    default: () => <>Введите название html елемента</>
 }
