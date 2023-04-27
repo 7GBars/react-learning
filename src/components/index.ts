@@ -1,2 +1,2 @@
-export {UserInfo} from './simpleTestComponent/UserInfo';
+export {UserInfo} from './userInfo/UserInfo';
 export {DynamicNameWrapper} from './JSXDynamicComponentName/DynamicNameWrapper';
