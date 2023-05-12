@@ -1,19 +1,21 @@
-import React, {useState} from 'react';
-import {DynamicNameWrapper, UserInfo} from './components';
+import React, {useEffect, useState} from 'react';
 import './App.scss';
-import {ComponentUseCallback} from "./hooksLearnings/useCallback&useMemo/UserInfo";
+import {useDidUpdateEffect} from "./hooksLearnings/useDidUpdateEffect/useDidUpdateEffect";
+
 
 
 
 function App() {
   const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
+  useDidUpdateEffect('only after deps update', [count])
+
   return (
     <div className="App">
-        <button onClick={(e) => setCount(c => ++c)}> plus </button>
-        <b>Count is: {count}</b>
-        <DynamicNameWrapper/>
-        {/*<UserInfo name={'random user'}/>*/}
-        <ComponentUseCallback name={'usecallback'}/>
+      <button onClick={() => setCount(p => ++p)}>Plus</button>
+      <b>count 1 is: {count}</b>
+      <b>count 2 is: {count2}</b>
+      <button onClick={() => setCount2(p => ++p)}>Plus</button>
     </div>
   );
 }
