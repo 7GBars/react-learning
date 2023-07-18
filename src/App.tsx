@@ -1,21 +1,23 @@
 import React, {useEffect, useState} from 'react';
 import './App.scss';
 import {useDidUpdateEffect} from "./hooksLearnings/useDidUpdateEffect/useDidUpdateEffect";
-
+import {useDeviceDetect} from "./customHooks";
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 
 
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [count2, setCount2] = useState(0);
-  useDidUpdateEffect('only after deps update', [count])
+
+  useDidUpdateEffect('only after deps update', [])
 
   return (
     <div className="App">
-      <button onClick={() => setCount(p => ++p)}>Plus</button>
-      <b>count 1 is: {count}</b>
-      <b>count 2 is: {count2}</b>
-      <button onClick={() => setCount2(p => ++p)}>Plus</button>
+      <BrowserView>
+        <h1>This is rendered only in browser</h1>
+      </BrowserView>
+      <MobileView>
+        <h1>This is rendered only on mobile</h1>
+      </MobileView>
     </div>
   );
 }
