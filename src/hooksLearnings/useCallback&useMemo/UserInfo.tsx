@@ -13,9 +13,7 @@ export function ComponentUseCallback(props: React.PropsWithChildren<TUserInfo>) 
            return <>dataGrid</>
     }), []);
 
-    useEffect(() => {
-
-    }, [MemoizedFunction])
+    
 
     return (
         <div>

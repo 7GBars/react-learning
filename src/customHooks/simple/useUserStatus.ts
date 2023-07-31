@@ -6,7 +6,7 @@ export const useUserStatus = () => {
     useEffect(() =>  {
         const intervalId = setInterval(() => {
             setStatus(Math.random() < 0.5);
-        }, 1000)
+        }, 6000)
         return () => {
             clearInterval(intervalId);
         }
