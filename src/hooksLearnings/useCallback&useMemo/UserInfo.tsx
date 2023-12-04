@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import {DynamicNameWrapper} from "../../components";
+import {DynamicNameWrapper} from "../../examples";
 
 type TUserInfo = {
     name: string;

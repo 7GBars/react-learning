@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import {DynamicNameWrapper, UserInfo} from "../../components";
-import {useAppContext} from "../../components/contextWrapper/ThemeContextProviderWrapper";
+import {DynamicNameWrapper, UserInfo} from "../../examples";
+import {useAppContext} from "../../examples/contextWrapper/ThemeContextProviderWrapper";
 
 type TUserInfo = {
     name: string;

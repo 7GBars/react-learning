@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {App} from './App';
-import {ThemeContextProviderWrapper} from "./components/contextWrapper/ThemeContextProviderWrapper";
+import {ThemeContextProviderWrapper} from "./examples/contextWrapper/ThemeContextProviderWrapper";
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';

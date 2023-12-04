@@ -3,7 +3,7 @@ import './App.scss';
 
 import { BrowserView, MobileView } from 'react-device-detect';
 import {MainPage} from "./pages/mainPage";
-import {ThemeContextProviderWrapper} from "./components/contextWrapper/ThemeContextProviderWrapper";
+import {ThemeContextProviderWrapper} from "./examples/contextWrapper/ThemeContextProviderWrapper";
 
 
 
