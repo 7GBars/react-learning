@@ -1,17 +1,13 @@
 import React from 'react';
+import {Page} from "./examples/passingComponentAsProps/PassComponentAsProps";
 import './App.scss';
-
-import { BrowserView, MobileView } from 'react-device-detect';
-import {MainPage} from "./pages/mainPage";
-import {ThemeContextProviderWrapper} from "./examples/contextWrapper/ThemeContextProviderWrapper";
-
 
 
 export function App() {
   console.log('render app')
   return (
     <div className="App">
-        <MainPage/>
+        <Page href={'https://ru.legacy.reactjs.org/docs/context.html#before-you-use-context'}/>
     </div>
   );
 }
