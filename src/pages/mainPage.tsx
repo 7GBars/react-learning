@@ -6,7 +6,7 @@ import {ComponentUseCallback} from "../hooksLearnings/useCallback/UseCallbackExa
 type TMainPageProps = {componentInfo?: string};
 
 export function MainPage(props: React.PropsWithChildren<TMainPageProps>) {
-
+  console.log('render MainPage')
   return (
     <div className={'main-page'}>
         <ComponentUseCallback name={'test'}/>

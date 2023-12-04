@@ -1,25 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './App.scss';
-import {useDidUpdateEffect} from "./hooksLearnings/useDidUpdateEffect/useDidUpdateEffect";
-import {useDeviceDetect} from "./customHooks";
-import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+
+import { BrowserView, MobileView } from 'react-device-detect';
 import {MainPage} from "./pages/mainPage";
+import {ThemeContextProviderWrapper} from "./components/contextWrapper/ThemeContextProviderWrapper";
 
 
 
-function App() {
-
+export function App() {
+  console.log('render app')
   return (
     <div className="App">
-      <BrowserView>
-        <h1>This is rendered only in browser</h1>
         <MainPage/>
-      </BrowserView>
-      <MobileView>
-        <h1>This is rendered only on mobile</h1>
-      </MobileView>
     </div>
   );
 }
 
-export default App;
+
