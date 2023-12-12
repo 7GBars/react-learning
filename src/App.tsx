@@ -5,10 +5,10 @@ import {Portal} from "./examples/ReactPortal/PortalTest";
 
 
 export function App() {
-  console.log('render app')
+
   return (
     <div className="App">
-        <Page href={'https://ru.legacy.reactjs.org/docs/context.html#before-you-use-context'}/>
+        {/*<Page href={'https://ru.legacy.reactjs.org/docs/context.html#before-you-use-context'}/>*/}
         <Portal name={'test'}/>
     </div>
   );
