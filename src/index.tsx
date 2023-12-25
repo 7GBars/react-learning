@@ -1,18 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
 import {App} from './App';
+import Root from "./routes/root";
 import {ThemeContextProviderWrapper} from "./examples/contextWrapper/ThemeContextProviderWrapper";
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root/>,
+  },
+]);
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <ThemeContextProviderWrapper defaultTheme={"light"}>
-    <App />
+    <RouterProvider router={router} />
   </ThemeContextProviderWrapper>
 );
 

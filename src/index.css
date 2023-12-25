@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-size: 5vh;
+  font-size: 10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -16,15 +16,10 @@ html, body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный цвет для эффекта перекрытия */
 }
-
 #root {
   position: relative;
-  z-index: 1; /* Чтобы контент был поверх оверлея */
-  color: white;
-  padding: 20px;
+  z-index: 1;
+
+  padding: 20px 0 0 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
