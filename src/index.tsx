@@ -4,14 +4,18 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import reportWebVitals from './reportWebVitals';
+
+
+import {ThemeContextProviderWrapper} from "./examples/contextWrapper/ThemeContextProviderWrapper";
 
 import {App} from './App';
 import Root from "./routes/root";
-import {ThemeContextProviderWrapper} from "./examples/contextWrapper/ThemeContextProviderWrapper";
-import reportWebVitals from './reportWebVitals';
+import ErrorPage from "./pages/errorPage";
+import Contact from "./routes/contacts/contacts";
 
 import './index.css';
-import ErrorPage from "./pages/errorPage";
+
 
 
 const router = createBrowserRouter([
@@ -19,6 +23,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root/>,
     errorElement: <ErrorPage/>
+  },
+  {
+    path: "contacts/:contactId",
+    element: <Contact />,
   },
 ]);
 
