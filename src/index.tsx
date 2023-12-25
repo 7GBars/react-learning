@@ -11,12 +11,14 @@ import {ThemeContextProviderWrapper} from "./examples/contextWrapper/ThemeContex
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
+import ErrorPage from "./pages/errorPage";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root/>,
+    errorElement: <ErrorPage/>
   },
 ]);
 
